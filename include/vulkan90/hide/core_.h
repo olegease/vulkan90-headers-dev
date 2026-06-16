@@ -17,7 +17,9 @@ typedef struct VkAllocationCallbacks {
 } VkAllocationCallbacks;
 
 typedef enum VkResult {
-    VK_SUCCESS = 0
+    VK_SUCCESS = 0,
+    VK_TODO = -1,
+    VK_RESULT_MAX_ENUM = 0x7FFFFFFF
 } VkResult;
 
 typedef enum VkStructureType {

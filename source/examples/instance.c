@@ -37,7 +37,7 @@ int main( void ) {
         puts( "=========================" );
     }
 
-    puts( "extension properties:" );
+    puts( "Extension properties:" );
     count = APP_EXT_PROP_MAX;
     result = vkEnumerateInstanceExtensionProperties( NULL, &count, app->extProp );
     assert( VK_SUCCESS <= result );
@@ -48,8 +48,8 @@ int main( void ) {
     app->info.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     app->instanceInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     app->instanceInfo.pApplicationInfo = &app->info;
-    result = vkCreateInstance( &app->instanceInfo, NULL, &instance );
-    assert( result == VK_SUCCESS );
+    app->instanceInfo.enabledLayerCount = 1;
+    instance = vk90_create_instance( &app->instanceInfo );
 
     vkDestroyInstance( instance, NULL );
 
