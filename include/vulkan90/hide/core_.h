@@ -10,11 +10,9 @@
     || ULONG_MAX <= 0xFFFFFFFFul
 #error "operational system platform are not supported because of C90 standard conformance, sorry!"
 #   endif
-typedef unsigned VkFlags;
 
-typedef struct VkAllocationCallbacks {
-    char todo;
-} VkAllocationCallbacks;
+typedef unsigned VkBool32;
+typedef unsigned VkFlags;
 
 typedef enum VkResult {
     VK_SUCCESS = 0,
@@ -27,7 +25,8 @@ typedef enum VkStructureType {
     VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO = 1
 } VkStructureType;
 
-#define VK_MAX_EXTENSION_NAME_SIZE 256u
-#define VK_MAX_DESCRIPTION_SIZE 256u
+typedef struct VkAllocationCallbacks {
+    char todo;
+} VkAllocationCallbacks;
 
 #endif/*VULKAN90_HIDE_CORE_H_*/

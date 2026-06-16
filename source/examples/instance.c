@@ -48,8 +48,9 @@ int main( void ) {
     app->info.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     app->instanceInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     app->instanceInfo.pApplicationInfo = &app->info;
-    app->instanceInfo.enabledLayerCount = 1;
-    instance = vk90_create_instance( &app->instanceInfo );
+
+    result = vkCreateInstance( &app->instanceInfo, NULL, &instance );
+    assert( VK_SUCCESS == result );
 
     vkDestroyInstance( instance, NULL );
 
