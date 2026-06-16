@@ -1,2 +1,6 @@
 Commands
-    usage: make [command]
+    usage       : make [command]
+    gen-ccjson  : generate compile commands json file
+    instance    : example of vulkan instance creation and enumeration of its properties
+    instance-run: execute instance example
+    clean       : remove build artifacts
