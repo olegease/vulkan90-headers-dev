@@ -7,6 +7,15 @@
 typedef struct VkPhysicalDevice_T *VkPhysicalDevice;
 typedef unsigned long VkDeviceSize;
 typedef VkFlags VkSampleCountFlags;
+typedef VkFlags VkQueueFlags;
+
+typedef enum VkQueueFlagBits {
+    VK_QUEUE_GRAPHICS_BIT = 0x00000001u,
+    VK_QUEUE_COMPUTE_BIT = 0x00000002u,
+    VK_QUEUE_TRANSFER_BIT = 0x00000004u,
+    VK_QUEUE_SPARSE_BINDING_BIT = 0x00000008u,
+    VK_QUEUE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFFu
+} VkQueueFlagBits;
 
 typedef enum VkPhysicalDeviceType {
     VK_PHYSICAL_DEVICE_TYPE_OTHER = 0,

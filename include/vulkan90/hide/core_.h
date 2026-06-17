@@ -29,6 +29,12 @@ typedef struct VkAllocationCallbacks {
     char todo;
 } VkAllocationCallbacks;
 
+typedef struct VkExtent3D {
+    unsigned width;
+    unsigned height;
+    unsigned depth;
+} VkExtent3D;
+
 #endif/*VULKAN90_HIDE_CORE_H_*/
 
 /* Apache License 2.0 */
