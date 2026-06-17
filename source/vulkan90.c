@@ -43,7 +43,39 @@ VkInstance vk90_create_instance( VkInstanceCreateInfo const *refInfo ) {
     HANDLE_ERROR( result, instance, NULL, __LINE__ - 1, "vkCreateInstance" );
 }
 
+VkInstance vk90_create_instance_default( void ) {
+    return vk90_create_instance( vk90_instance_info_static( ) );
+}
+
+VkInstanceCreateInfo const *vk90_instance_info_static( void ) {
+    static VkApplicationInfo const appInfo = {
+        VK_STRUCTURE_TYPE_APPLICATION_INFO,
+        NULL,
+        "",
+        0,
+        "",
+        0,
+        0
+    };
+
+    static VkInstanceCreateInfo const info = {
+        VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
+        NULL,
+        0,
+        &appInfo,
+        0, NULL, /* layers */
+        0, NULL /* extensions */
+    };
+
+    return &info;
+}
+
+VkInstanceCreateInfo vk90_instance_info_default( void ) {
+    return *vk90_instance_info_static( );
+}
+
 /* Apache License 2.0 */
 /* NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0> */
 /* SPDX-License-Identifier: Apache-2.0 */
+/* lib: `vulkan90-headers-dev` (research) C90 Conformant Vulkan Headers */
 /* Ⓒ Copyright (c) 2026 Oleg'Ease'Kharchuk ᦒ */

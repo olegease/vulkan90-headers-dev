@@ -13,11 +13,7 @@ typedef enum VkPhysicalDeviceType {
     VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU = 1,
     VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU = 2,
     VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU = 3,
-    VK_PHYSICAL_DEVICE_TYPE_CPU = 4,
-    VK_PHYSICAL_DEVICE_TYPE_BEGIN_RANGE = VK_PHYSICAL_DEVICE_TYPE_OTHER,
-    VK_PHYSICAL_DEVICE_TYPE_END_RANGE = VK_PHYSICAL_DEVICE_TYPE_CPU,
-    VK_PHYSICAL_DEVICE_TYPE_RANGE_SIZE = (VK_PHYSICAL_DEVICE_TYPE_CPU - VK_PHYSICAL_DEVICE_TYPE_OTHER + 1),
-    VK_PHYSICAL_DEVICE_TYPE_MAX_ENUM = 0x7FFFFFFF
+    VK_PHYSICAL_DEVICE_TYPE_CPU = 4
 } VkPhysicalDeviceType;
 
 typedef struct VkPhysicalDeviceLimits {
@@ -138,3 +134,9 @@ typedef struct VkPhysicalDeviceSparseProperties {
 } VkPhysicalDeviceSparseProperties;
 
 #endif/*VK90_HIDE_PHYSICAL_DEVICE_H_*/
+
+/* Apache License 2.0 */
+/* NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0> */
+/* SPDX-License-Identifier: Apache-2.0 */
+/* lib: `vulkan90-headers-dev` (research) C90 Conformant Vulkan Headers */
+/* Ⓒ Copyright (c) 2026 Oleg'Ease'Kharchuk ᦒ */

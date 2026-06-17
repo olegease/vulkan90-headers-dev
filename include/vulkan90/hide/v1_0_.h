@@ -24,8 +24,20 @@ VkResult vkEnumerateInstanceExtensionProperties( char const *refLayerName, unsig
 
 #include "instance_.h"
 
+void vkDestroyInstance( VkInstance instance, VkAllocationCallbacks const *refAlloc );
+
+typedef struct VkInstanceCreateInfo {
+    VkStructureType sType;
+    void const *pNext;
+    VkInstanceCreateFlags flags;
+    VkApplicationInfo const *pApplicationInfo;
+    unsigned enabledLayerCount;
+    char const *const *ppEnabledLayerNames;
+    unsigned enabledExtensionCount;
+    char const *const *ppEnabledExtensionNames;
+} VkInstanceCreateInfo;
+
 VkResult vkCreateInstance( VkInstanceCreateInfo const *refInfo, VkAllocationCallbacks const *refAlloc, VkInstance *out );
-void vkDestroyInstance( VkInstance in, VkAllocationCallbacks const *refAlloc );
 
 #include "physical_device_.h"
 
@@ -49,3 +61,9 @@ typedef struct VkPhysicalDeviceProperties {
 void vkGetPhysicalDeviceProperties( VkPhysicalDevice physDevice, VkPhysicalDeviceProperties *outProps );
 
 #endif/*VULKAN90_HIDE_V1_0_H_*/
+
+/* Apache License 2.0 */
+/* NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0> */
+/* SPDX-License-Identifier: Apache-2.0 */
+/* lib: `vulkan90-headers-dev` (research) C90 Conformant Vulkan Headers */
+/* Ⓒ Copyright (c) 2026 Oleg'Ease'Kharchuk ᦒ */

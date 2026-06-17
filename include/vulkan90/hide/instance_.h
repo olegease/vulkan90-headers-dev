@@ -17,15 +17,10 @@ typedef struct VkApplicationInfo {
     unsigned apiVersion;
 } VkApplicationInfo;
 
-typedef struct VkInstanceCreateInfo {
-    VkStructureType sType;
-    void const *pNext;
-    VkInstanceCreateFlags flags;
-    VkApplicationInfo const *pApplicationInfo;
-    unsigned enabledLayerCount;
-    char const *const *ppEnabledLayerNames;
-    unsigned enabledExtensionCount;
-    char const *const *ppEnabledExtensionNames;
-} VkInstanceCreateInfo;
-
 #endif/*VULKAN90_HIDE_INSTANCE_H_*/
+
+/* Apache License 2.0 */
+/* NO WARRANTY OF ANY KIND see <http://www.apache.org/licenses/LICENSE-2.0> */
+/* SPDX-License-Identifier: Apache-2.0 */
+/* lib: `vulkan90-headers-dev` (research) C90 Conformant Vulkan Headers */
+/* Ⓒ Copyright (c) 2026 Oleg'Ease'Kharchuk ᦒ */
